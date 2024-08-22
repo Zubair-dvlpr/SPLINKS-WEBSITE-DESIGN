@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPLINKS-WEBSITE-DESIGN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #10281E;
+            color: #fff;
+            font-family: "Syne", sans-serif;
+        }
+
+        .personal-details {
+            border-radius: 22px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(11, 219, 86, 0.10) 100%);
+            padding: 26px;
+            ;
+            backdrop-filter: blur(45px);
+        }
+
+        .personal-details ul li {
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(11, 219, 86, 0.10) 100%);
+            backdrop-filter: blur(45px);
+            padding: 15px 18px;
+            font-family: Syne;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        li strong {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .nav-tabs .nav-link:hover {
+            border: 1px solid #60B7A3;
+        }
+
+        .nav-tabs .nav-link {
+            display: flex;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(11, 219, 86, 0.10) 100%);
+            padding: 20px;
+            backdrop-filter: blur(45px);
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: transparent;
+            border: 1px solid #60B7A3;
+        }
+
+        .nav-tabs {
+            flex-direction: column;
+            border: none;
+        }
+
+        .tab-content {
+            /* padding-left: 20px; */
+        }
+
+        .sidebar,
+        .video-player {
+            border-radius: 22px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(11, 219, 86, 0.10) 100%);
+            backdrop-filter: blur(45px);
+            padding: 20px;
+        }
+
+        .flex-item {
+            flex: 50%;
+        }
+
+        .videos {
+            row-gap: 15px;
+        }
+
+        @media (max-width: 500px) {
+
+            .flex-item {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-9 personal-details">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center align-items-start">
+                        <img src="assets/img/player.png" alt="player Img not Found"
+                            class="img-fluid mx-auto rounded-circle">
+                    </div>
+                    <div class="col-md-9">
+                        <h3>Personal Details</h3>
+                        <ul class="list-style-none d-flex gap-2 flex-column ps-0">
+                            <li class="d-flex justify-content-between">
+                                <strong>Name</strong> Ac Coulsdon
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <strong>Positions</strong> 1st Position
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <strong>Age</strong> 25
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <strong>height</strong> 6'3''
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <strong>Top Rated</strong>
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_143_2061)">
+                                            <path
+                                                d="M18.4941 3.80103C20.5891 5.02203 22.0631 7.50103 21.9981 10.393C21.8601 16.5 13.5001 21 12.0001 21C10.5001 21 2.13907 16.5 2.00207 10.393C1.93707 7.50103 3.41107 5.02303 5.50607 3.80103C7.46607 2.66003 9.92807 2.65303 12.0001 4.33803C14.0721 2.65303 16.5341 2.65903 18.4941 3.80103Z"
+                                                fill="#FE254C" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_143_2061">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg> 10
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <style>
+                    .playerImg {
+                        background: linear-gradient(0deg, #03B085 0.3%, #01A6E4 71.25%);
+                        border: 4px solid #fff;
+                        border-radius: 22px;
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                    .src {
+                        margin-top: 8px;
+                        height: 50px;
+                        display: flex;
+                        justify-content: space-around;
+                    }
+
+                    .src div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .plyrtitle {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        position: absolute;
+                        bottom: 65px;
+                        width: 95%;
+                    }
+
+                    .clublogo {
+                        width: 70px;
+                    }
+
+                    .plyerInfo {
+                        position: absolute;
+                        z-index: 2;
+                        text-align: center;
+                        top: 40%;
+                        transform: translate(3px, -50%);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 8px;
+                    }
+
+                    .plyerInfo img {
+                        width: 25px;
+                    }
+
+                    @media only screen and (max-width: 500px) {
+                        .plyrtitle h4{
+                            margin-bottom: 20px;
+                        }
+                        .plyrtitle {
+                         bottom: 14%;
+                        }
+                    }
+                </style>
+                <div class="playerImg p-2">
+                    <img src="assets/img/Vector.png" alt="" class="img-fluid">
+                    <div class="plyerInfo">
+                        <span>96</span>
+                        <span>ST</span>
+                        <img src="assets/img/image13.png" alt="">
+                        <img src="assets/img/image14.png" alt="">
+                    </div>
+                    <div class="plyrtitle">
+                        <h4 class="">HAALAND</h4>
+                        <img src="assets/img/clublogo.png" alt="" class="clublogo">
+                    </div>
+                    <div class="src">
+                        <div>
+                            <span>G</span>
+                            <span>00</span>
+                        </div>
+                        <div>
+                            <span>APPS</span>
+                            <span>02</span>
+                        </div>
+                        <div>
+                            <span>A</span>
+                            <span>01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <ul class="nav nav-tabs gap-2" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white active" id="tab1-tab" data-bs-toggle="tab" href="#tab1"
+                                role="tab" aria-controls="tab1" aria-selected="true">
+                                Goals <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
+                                aria-controls="tab2" aria-selected="false">
+                                Assist
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab"
+                                aria-controls="tab3" aria-selected="false">
+                                Goals
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white" id="tab4-tab" data-bs-toggle="tab" href="#tab4" role="tab"
+                                aria-controls="tab4" aria-selected="false">
+                                Assist
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white" id="tab5-tab" data-bs-toggle="tab" href="#tab5" role="tab"
+                                aria-controls="tab5" aria-selected="false">
+                                Goals
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link text-white" id="tab6-tab" data-bs-toggle="tab" href="#tab6" role="tab"
+                                aria-controls="tab6" aria-selected="false">
+                                Assist
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18"
+                                    fill="none">
+                                    <path d="M8 12.75L11.75 9L8 5.25" stroke="#ECF86E" stroke-width="1.875"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                        <div class="row videos">
+                            <div class="flex-item">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="row videos">
+                            <div class="flex-item ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <div class="row ">
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
+                        <div class="row">
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
+                        <div class="row">
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="tab6-tab">
+                        <div class="row">
+                            <div class="flex-item  ">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="flex-item">
+                                <div class="video-player">
+                                    <video controls width="100%" poster="assets/img/videoposter.png">
+                                        <source src="assets/video/Promo.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Function to pause other videos when a new one is played
+        const videos = document.querySelectorAll('video');
+        let currentPlaying = null;
+
+        videos.forEach(video => {
+            video.addEventListener('play', () => {
+                if (currentPlaying && currentPlaying !== video) {
+                    currentPlaying.pause();
+                }
+                currentPlaying = video;
+            });
+        });
+    </script>
+</body>
+
+</html>
